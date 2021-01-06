@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e" modified="2021-01-04T13:33:27.670Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="qBh5kYXWc8hXLl6FlDhc" version="13.10.0" type="embed">
+    <diagram id="1T_3Jkx73ErTeYEIWHNT" name="Page-1">
+        <mxGraphModel dx="680" dy="392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="155" value="トップページ&lt;br&gt;&lt;br&gt;直近投稿一覧&lt;br&gt;カレンダー" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="290" y="170" width="110" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="サインイン、&lt;br&gt;ログインページ" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="110" y="210" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="投稿詳細ページ" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="450" y="210" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="投稿ページ" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="295" y="50" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.44;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="158">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="340" y="170" as="sourcePoint"/>
+                        <mxPoint x="390" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="163" value="投稿編集ページ" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="600" y="210" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.44;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="240" as="sourcePoint"/>
+                        <mxPoint x="220" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="166" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.44;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="455" y="234.5" as="sourcePoint"/>
+                        <mxPoint x="395" y="234.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="174" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.44;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="605" y="236" as="sourcePoint"/>
+                        <mxPoint x="545" y="236" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
