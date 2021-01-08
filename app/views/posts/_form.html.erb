@@ -1,6 +1,14 @@
-<%= form_with(model: @post, local: true) do |form| %>
-      <%= form.text_area :title, placeholder: "タイトル", rows: "1" %>
-      <%= form.text_area :text, placeholder: "内容", rows: "10" %>
-      <%= form.submit "SEND" %>
+<%= form_with(model: @post, local: true) do |f| %>
+      <%= f.text_area :title, placeholder: "タイトル", rows: "1" %>
+      <%= f.text_area :text, placeholder: "内容", rows: "10" %>
+      <div class="click-upload">
+        <p>
+          画像をアップロード
+        </p>
+        <%= f.file_field :images, multiple: true, id:"post-images" %>
+        <%= f.file_field :images, multiple: true, id:"post-images" %>
+        <%= f.file_field :images, multiple: true, id:"post-images" %>
+      </div>
+      <%= f.submit "SEND" %>
     <% end %>
 

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:create, :edit, :update, :show, :destroy]
+  before_action :set_post, only: [:edit, :update, :show, :destroy]
   before_action :move_to_log_in, except: [:index]
   before_action :move_to_root_path, only: [:edit]
 
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title,:text).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :text, images: []).merge(user_id: current_user.id)
   end
 
 end

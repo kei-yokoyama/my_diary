@@ -13,9 +13,10 @@
         </ul>
       </div>
       <p><%= post.title %></p>
+      <% post.images.each do |image| %>
+      <%= image_tag image.variant(resize: '100x100'), class: 'post-images' if post.images.attached? %>
+      <% end %>
       <p><%= post.text %></p>
         </a>
       </span>
     </div>
-
-    
