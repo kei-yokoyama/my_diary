@@ -1,0 +1,6 @@
+<%= form_with(model: @post, local: true) do |form| %>
+      <%= form.text_area :title, placeholder: "タイトル", rows: "1" %>
+      <%= form.text_area :text, placeholder: "内容", rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+
