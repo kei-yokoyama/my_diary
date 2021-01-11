@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :nickname, presence: true, length: {maximum: 8}
   validates :password, format: { with: /\A[ -~]+\z/, message: '半角英数字記号入力してください' }
   end
+
+  has_many :posts
 end
