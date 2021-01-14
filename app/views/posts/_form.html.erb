@@ -1,4 +1,8 @@
 <%= form_with(model: @post, local: true) do |f| %>
+  <div class="time">
+    <%= f.label :start_time, "投稿日時" %>
+    <%= f.datetime_select :start_time %>
+  </div>
       <%= f.text_area :title, placeholder: "タイトル", rows: "1" %>
       <%= f.text_area :text, placeholder: "内容", rows: "10" %>
       <div class="click-upload">

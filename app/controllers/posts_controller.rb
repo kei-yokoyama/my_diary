@@ -11,7 +11,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -26,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    
+  
   end
 
   def update
@@ -44,6 +43,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def calendar
+    @posts = Post.includes(:user).order("created_at DESC")
+  end
 
   private
 
@@ -62,7 +64,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :text, images: []).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :text, :start_time, :end_time, images: []).merge(user_id: current_user.id)
   end
 
 end
