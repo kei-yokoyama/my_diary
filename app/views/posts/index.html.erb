@@ -5,13 +5,14 @@
 
 <div class="contents row">
   <%= post_lists(@posts) %>
-</div>
 
-  <%#= month_calendar events: @posts do |date, posts| %>
-  <%#= date %>
-    <%# posts.each do |post| %>
+  <%= month_calendar events: @posts do |date, posts| %>
+  <%= date %>
+    <% posts.each do |post| %>
     <div>
-      <%#= link_to tweet_path(tweet.id), tweet %>
+      <%= link_to post_path(post.id), post %>
     </div>
-  <%# end %>
-  <%# end %>
+    <% end %>
+  <% end %>
+
+</div>
