@@ -1,0 +1,10 @@
+<div class="contents row">
+  <%= month_calendar events: @posts do |date, posts| %>
+  <%= date.day %>
+    <% posts.each do |post| %>
+    <div>
+      <%= link_to "#{post.title}", post_path(post.id) %>
+    </div>
+    <% end %>
+  <% end %>
+</div>

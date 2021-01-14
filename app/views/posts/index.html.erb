@@ -6,13 +6,4 @@
 <div class="contents row">
   <%= post_lists(@posts) %>
 
-  <%= month_calendar events: @posts do |date, posts| %>
-  <%= date %>
-    <% posts.each do |post| %>
-    <div>
-      <%= link_to post_path(post.id), post %>
-    </div>
-    <% end %>
-  <% end %>
-
 </div>

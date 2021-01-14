@@ -705,8 +705,20 @@ footer p {
   width: 10%;
 }
 
+.calendar-heading {
+}
+
+.calendar-week-name {
+  background-color: #ffb6c1;
+}
+
+.calendar-days {
+  background-color: #fffafa;
+}
+
 .simple-calendar {
-  width: 10%;
+  width: 100%;
+
   .day {
   }
 
