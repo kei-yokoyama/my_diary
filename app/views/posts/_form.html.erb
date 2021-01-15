@@ -4,8 +4,11 @@
     <%= f.datetime_select :start_time %>
   </div>
       <%= f.text_area :title, placeholder: "タイトル", rows: "1" , id: "title" %>
+      <button type="button" id="emoji-title">😀</button>
+      <emoji-picker hidden id="emoji-picker-title"></emoji-picker>
       <%= f.text_area :text, placeholder: "内容", rows: "10", id: "text" %>
-      <emoji-picker></emoji-picker>
+      <button type="button" id="emoji-text">😀</button>
+      <emoji-picker hidden id="emoji-picker-text"></emoji-picker>
       <div class="click-upload">
         <p>
           画像をアップロード
