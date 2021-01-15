@@ -4,7 +4,10 @@ class PostsController < ApplicationController
   before_action :move_to_root_path, only: [:edit]
 
   def index
-    @posts = Post.includes(:user).order("created_at DESC")
+    if user_signed_in?
+    user = User.find(current_user.id) 
+    @posts = user.posts.order("created_at DESC")
+    end
   end
 
   def new
