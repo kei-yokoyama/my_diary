@@ -691,6 +691,10 @@ footer p {
   text-align: center;
 }
 
+.error-alert {
+  color: red;
+}
+
 .search-form {
   text-align: center;
   padding-top: 32px;

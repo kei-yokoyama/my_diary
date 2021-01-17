@@ -41,7 +41,7 @@ RSpec.describe Post, type: :model do
           @post.text = nil
           @post.images = nil
           @post.valid?
-          expect(@post.errors.full_messages).to include("Text 本文または画像を入力してください")
+          expect(@post.errors.full_messages).to include("Text 内容または画像を入力してください")
         end
 
         
