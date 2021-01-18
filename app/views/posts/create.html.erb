@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="success">
+    <h3>投稿が完了しました。</h3>
+    <a class="btn" href="/">投稿一覧へ戻る</a>
+  </div>
+  <br>
+  <br>
+  <%= @message.text %>
+  <br>
+  <%= image_tag @message.image.variant(resize: '400x400'), class: 'post-image' if @message.image.attached? %>
+</div>

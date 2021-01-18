@@ -17,11 +17,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to root_path
-    else
+    unless @post.save
       render :new
     end
+
+    user = User.find(current_user.id) 
+    @message = user.messages.sample
   end
 
   def show

@@ -1,0 +1,18 @@
+<div class="content_post" style="background-image: url(<%= message.text %>);">
+      <div class="more">
+        <ul class="more_list">
+          <% if user_signed_in? && current_user.id == message.user_id %>
+            <li>
+              <%= link_to '編集', edit_message_path(message.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', message_path(message.id), method: :delete %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <p><%= message.text %></p>
+      <%= image_tag message.image.variant(resize: '300x300'), class: 'post-image' if message.image.attached? %>
+
+</div>
