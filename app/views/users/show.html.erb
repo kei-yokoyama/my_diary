@@ -2,6 +2,10 @@
 <p><%= @nickname %>さん</p>
 <p>email： <%= current_user.email %></p>
 <br>
-<%= link_to "email、password変更、退会はこちら", edit_user_registration_path %>
+
+<%= link_to "投稿完了画面設定はこちら", messages_path , class: "link"%>
+<br>
+<%= link_to "email、password変更、退会はこちら", edit_user_registration_path , class: "link" %>
+
 
 </div>

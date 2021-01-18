@@ -463,6 +463,10 @@ a:hover {
   color: #57c3e9;
 }
 
+.link {
+  color: #2c7cff;
+}
+
 .btn,
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
@@ -718,6 +722,11 @@ footer p {
 
 .calendar-days {
   background-color: #fffafa;
+}
+
+.calendar {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .simple-calendar {

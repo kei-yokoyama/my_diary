@@ -20,6 +20,9 @@ class PostsController < ApplicationController
     unless @post.save
       render :new
     end
+
+    user = User.find(current_user.id) 
+    @message = user.messages.sample
   end
 
   def show
