@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2021_01_18_090703) do
     t.text "text", null: false
     t.bigint "user_id"
     t.datetime "start_time"
-    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
