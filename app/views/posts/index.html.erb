@@ -4,6 +4,12 @@
 <%# end %>
 
 <div class="contents row">
+          <% if user_signed_in? %>
+          <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+          <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= f.submit "検索", class: "search-btn" %>
+          <% end %>
+          <% end %>
   <%= post_lists(@posts) %>
 
 </div>

@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
   before_action :move_to_log_in, except: [:index]
   before_action :move_to_root_path, only: [:edit, :show]
+  before_action :set_user
 
   def index
     #ユーザー自身の投稿のみ表示
@@ -57,6 +58,11 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user).order("created_at DESC")
   end
 
+  def search
+    @posts = @user.posts.search(params[:keyword])
+  end
+
+
   private
 
   #@postをparams[:id]のレコードと定義
@@ -80,5 +86,10 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text, :start_time, :end_time, images: []).merge(user_id: current_user.id)
   end
+
+    #@userをログインユーザーと定義
+    def set_user
+      @user = User.find(current_user.id)
+    end
 
 end
