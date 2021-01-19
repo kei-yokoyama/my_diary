@@ -1,14 +1,5 @@
 
-  <div class="contents row">
-      <div class="date"><%=l @post.created_at %></div>
-      <div class="title"><%= @post.title %></div>
-      <% @post.images.each do |image| %>
-      <li>
-      <%= image_tag image.variant(resize: '100x100'), class: 'post-images' if @post.images.attached? %>
-      </li>
-      <% end %>
-      <p><%= @post.text %></p>
-  </div>
-
-
+<div class="contents row">
+  <%= render partial: "post", locals: {post: @post } %>
+</div>
 

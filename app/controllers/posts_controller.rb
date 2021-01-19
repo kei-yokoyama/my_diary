@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   end
 
   def calendar
-    @posts = Post.includes(:user).order("created_at DESC")
+    @posts = @user.posts.includes(:user).order("created_at DESC")
   end
 
   def search
