@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get 'calendar'
-    end
+      get 'search'
+      end
   end
+  
 
   resources :users, only: [:show, :edit]
   resources :messages, only: [:index, :new, :create, :edit, :update, :destroy]

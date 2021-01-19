@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
   before_action :move_to_log_in, except: [:index]
   before_action :move_to_root_path, only: [:edit, :show]
+  before_action :set_user
 
   def index
     #ユーザー自身の投稿のみ表示
     if user_signed_in?
-    user = User.find(current_user.id) 
-    @posts = user.posts.order("created_at DESC")
+    @posts = @user.posts.order("created_at DESC")
     end
   end
 
@@ -16,9 +16,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = User.find(current_user.id)
-    if user.messages != nil
-    @message = user.messages.sample
+    if @user.messages != nil
+    @message = @user.messages.sample
     else
     @message = nil
     end
@@ -57,6 +56,11 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user).order("created_at DESC")
   end
 
+  def search
+    @posts = @user.posts.search(params[:keyword])
+  end
+
+
   private
 
   #@postをparams[:id]のレコードと定義
@@ -79,6 +83,13 @@ class PostsController < ApplicationController
   #投稿、編集のストロングパラメーター
   def post_params
     params.require(:post).permit(:title, :text, :start_time, :end_time, images: []).merge(user_id: current_user.id)
+  end
+
+  #@userをログインユーザーと定義
+  def set_user
+    if user_signed_in?
+    @user = User.find(current_user.id)
+    end
   end
 
 end
