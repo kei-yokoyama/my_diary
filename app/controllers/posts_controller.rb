@@ -16,13 +16,18 @@ class PostsController < ApplicationController
   end
 
   def create
+    user = User.find(current_user.id)
+    if user.messages != nil
+    @message = user.messages.sample
+    else
+    @message = nil
+    end
     @post = Post.new(post_params)
-    unless @post.save
+    if @post.save
+      render "/posts/create"
+    else
       render :new
     end
-
-    user = User.find(current_user.id) 
-    @message = user.messages.sample
   end
 
   def show
