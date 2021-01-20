@@ -58,7 +58,7 @@ Web ブラウザ Google Chrome の最新版を利用してアクセスしてく�
 
 ## データベース設計
 
-[ER 図](../public/images/ER.png)
+[ER 図](public/images/ER.png)
 
 ## ローカルでの動作方法
 
