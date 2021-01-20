@@ -603,6 +603,17 @@ div.contents.row div.content_post .more {
   text-align: right;
 }
 
+div.contents.row div.content_post .more_lsit_mark {
+  position: absolute;
+  cursor: pointer;
+  top: 30px;
+  right: 50px;
+  z-index: 2;
+  height: 100px;
+  width: 80px;
+  text-align: right;
+}
+
 div.contents.row div.content_post .more:hover ul.more_list {
   display: block;
 }
@@ -618,6 +629,16 @@ div.contents.row div.content_post .more ul.more_list {
   display: none;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+}
+
+div.contents.row div.content_post .more ul.more_list li a {
+  display: block;
+  padding: 5px;
+}
+
+div.contents.row div.content_post .more ul.more_list li a:hover {
+  background-color: #57c3e9;
+  color: #fff;
 }
 
 div.contents.row div.content_post .date {
@@ -658,7 +679,7 @@ div.contents.row div.content_post p {
 form input,
 form textarea {
   width: 100%;
-  margin: 5px 0 15px;
+  margin: 5px 0 5px;
   padding: 10px;
   border: 1px solid #d8d8d8;
   border-radius: 5px;
@@ -701,7 +722,7 @@ footer p {
 
 .search-form {
   text-align: center;
-  padding-top: 32px;
+  padding-top: 25px;
 }
 
 .search-form .search-input {
@@ -711,6 +732,13 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+
+.message {
+  font-size: 30px;
+  color: #ffad90;
+  font-weight: bold;
+  font-family: "游ゴシック", "YuGothic";
 }
 
 .calendar-heading {

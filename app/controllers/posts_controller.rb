@@ -57,7 +57,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = @user.posts.search(params[:keyword])
+    @posts = @user.posts.search(params[:keyword]).order("created_at DESC")
   end
 
 

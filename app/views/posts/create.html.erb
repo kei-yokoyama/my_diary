@@ -5,9 +5,10 @@
   </div>
   <br>
   <br>
-  <% unless @message == nil %>%
-  <%= @message.text %>
-  <br>
+  <% unless @message == nil %>
+  <div class= "message">
+  <%= @message.text %></p>
+  <div>
   <%= image_tag @message.image.variant(resize: '400x400'), class: 'post-image' if @message.image.attached? %>
   <% end %>
 </div>
