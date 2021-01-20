@@ -734,6 +734,13 @@ footer p {
   width: 10%;
 }
 
+.message {
+  font-size: 30px;
+  color: #ffad90;
+  font-weight: bold;
+  font-family: "游ゴシック", "YuGothic";
+}
+
 .calendar-heading {
 }
 
