@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     #ユーザー自身の投稿のみ表示
     if user_signed_in?
-    @posts = @user.posts.order("created_at DESC")
+    @posts = @user.posts.order("start_time DESC")
     end
   end
 
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   end
 
   def calendar
-    @posts = @user.posts.includes(:user).order("created_at DESC")
+    @posts = @user.posts.includes(:user).order("start_time DESC")
   end
 
   def search
