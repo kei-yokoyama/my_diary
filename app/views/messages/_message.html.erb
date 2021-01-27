@@ -13,7 +13,7 @@
         </ul>
       </div>
 
-      <p><%= message.text %></p>
+      <p><%= simple_format(message.text) %></p>
       <%= image_tag message.image.variant(resize: '300x300'), class: 'post-image' if message.image.attached? %>
 
 </div>

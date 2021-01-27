@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
-    title                 { "今日の日記" }
-    text                  { "よろしくお願いします。" }
+    title                 { '今日の日記' }
+    text                  { 'よろしくお願いします。' }
     association :user
 
     after(:build) do |post|

@@ -1,12 +1,12 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:edit, :update, :destroy]
+  before_action :set_message, only: %i[edit update destroy]
   before_action :move_to_log_in
-  before_action :move_to_root_path, only: [:edit] 
+  before_action :move_to_root_path, only: [:edit]
 
   def index
     if user_signed_in?
-      user = User.find(current_user.id) 
-    @messages = user.messages.order("created_at DESC")
+      user = User.find(current_user.id)
+      @messages = user.messages.order('created_at DESC')
     end
   end
 
@@ -23,9 +23,7 @@ class MessagesController < ApplicationController
     end
   end
 
-  def edit
-  
-  end
+  def edit; end
 
   def update
     if @message.update(message_params)
@@ -44,24 +42,22 @@ class MessagesController < ApplicationController
 
   private
 
-  #@messageをparams[:id]のレコードと定義
+  # @messageをparams[:id]のレコードと定義
   def set_message
     @message = Message.find(params[:id])
   end
 
-  #サインインしていない状態で投稿、編集ページに移動しようとすると、ログインページに遷移。
+  # サインインしていない状態で投稿、編集ページに移動しようとすると、ログインページに遷移。
   def move_to_log_in
     redirect_to new_user_session_path unless user_signed_in?
   end
 
-  #メッセージ内容のストロングパラメーター
+  # メッセージ内容のストロングパラメーター
   def move_to_root_path
-    if current_user.id != @message.user_id 
-      redirect_to root_path 
-    end
+    redirect_to root_path if current_user.id != @message.user_id
   end
 
-  #メッセージ、編集のストロングパラメーター
+  # メッセージ、編集のストロングパラメーター
   def message_params
     params.require(:message).permit(:text, :image).merge(user_id: current_user.id)
   end
