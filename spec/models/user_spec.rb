@@ -20,9 +20,9 @@ RSpec.describe User, type: :model do
         end
 
         it 'nicknameが9文字以上' do
-          @user.nickname = "123456789"
+          @user.nickname = '123456789'
           @user.valid?
-          expect(@user.errors.full_messages).to include("Nickname is too long (maximum is 8 characters)")
+          expect(@user.errors.full_messages).to include('Nickname is too long (maximum is 8 characters)')
         end
 
         it 'passwordが5文字以下' do
@@ -91,7 +91,6 @@ RSpec.describe User, type: :model do
           @user.valid?
           expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
         end
-
       end
     end
   end
