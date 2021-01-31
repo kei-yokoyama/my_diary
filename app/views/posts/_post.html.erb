@@ -16,7 +16,9 @@
       <div class="date"><%= post.start_time.strftime("%Y-%m-%d %H:%M:%S") %></div>
       <div class="title"><%= post.title %></div>
       <% post.images.each do |image| %>
+      <%= link_to image, "data-lightbox" => image do %>
       <%= image_tag image.variant(resize: '100x100'), class: 'post-images' if post.images.attached? %>
+      <% end %>
       <% end %>
       <p><%= simple_format(post.text) %></p>
       
