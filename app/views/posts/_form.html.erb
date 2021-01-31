@@ -12,13 +12,12 @@
       <%= f.text_area :text, placeholder: "内容", rows: "10", id: "text" %>
       <button type="button" id="emoji-text">😀</button>
       <emoji-picker hidden id="emoji-picker-text"></emoji-picker>
-      <div class="click-upload">
+      <div class="click-upload" id="click-upload">
         <p>
           画像をアップロード
         </p>
         <%= f.file_field :images, multiple: true, id:"post-images" %>
-        <%= f.file_field :images, multiple: true, id:"post-images" %>
-        <%= f.file_field :images, multiple: true, id:"post-images" %>
+        <div id="image-list"></div>
       </div>
       <%= f.submit "SEND" %>
     <% end %>

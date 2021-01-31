@@ -22,4 +22,4 @@ function hover() {
   });
 };
 
-window.addEventListener('load', hover);
+window.addEventListener('DOMContentLoaded', hover);
