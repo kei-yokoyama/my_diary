@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations'
+  }
 
   resources :posts do
     collection do
