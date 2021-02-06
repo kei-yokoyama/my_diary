@@ -1,11 +1,13 @@
 <div class="actions">
-
+<p></p> <%# 改行 %>
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to 'GoogleでLog in', user_google_oauth2_omniauth_authorize_path, method: :post%><br />
+      <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do %>
+      <%= image_tag '/images/btn_google_signin_light_normal_web.png',width: '20%', height: '20%'%><br />
+      <% end %>
     <% end %>
   <% end %>
-  
+
   <%- if controller_name != 'sessions' %>
     <%= link_to "Log in", new_session_path(resource_name) %><br />
   <% end %>
