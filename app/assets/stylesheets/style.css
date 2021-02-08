@@ -806,8 +806,8 @@ footer p {
   margin: 0.8px;
 }
 .google_log_in:hover {
-  border: 0.1px solid #6699ff;
-  margin: -0.1px;
   width: "10%";
   height: "10%";
+  border: 0.1px solid #6699ff;
+  margin: -0.1px;
 }
