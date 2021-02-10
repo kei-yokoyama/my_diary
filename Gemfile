@@ -63,7 +63,7 @@ gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'image_processing', '~> 1.2'
 gem 'mini_magick'
-gem 'simple_calendar', '~> 2.0'
-gem 'omniauth-google-oauth2'
-gem "omniauth-rails_csrf_protection" #Omniauth認証はCSRF脆弱性が指摘されているため、この「omniauth-rails_csrf_protection」Gemで対策
 gem 'omniauth', '~>1.9.1'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection' # Omniauth認証はCSRF脆弱性が指摘されているため、この「omniauth-rails_csrf_protection」Gemで対策
+gem 'simple_calendar', '~> 2.0'
