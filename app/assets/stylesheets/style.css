@@ -489,6 +489,31 @@ header.header div.header__bar.row div.grid-ctions a.post:hover {
   font-weight: bold;
 }
 
+footer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 0;
+  overflow: auto; /* コンテンツの表示を自動に設定（スクロール） */
+}
+
+.l {
+  padding: 10px;
+  position: fixed;
+  float: right;
+  left: 0;
+  bottom: 0;
+}
+
+.r {
+  padding: 10px;
+  position: fixed;
+  float: right;
+  right: 0;
+  bottom: 0;
+}
+
 header.header {
   padding: 10px;
   border-bottom: 1px solid #d8d8d8;
@@ -707,13 +732,13 @@ form input[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-footer {
+.footer2 {
   margin: 30px auto;
   padding: 10px;
   color: #d8d8d8;
 }
 
-footer p {
+.footer2 p {
   text-align: center;
 }
 
