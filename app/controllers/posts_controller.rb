@@ -1,3 +1,4 @@
+# 日記投稿コントローラー
 class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update show destroy]
   before_action :move_to_log_in, except: [:index]
@@ -42,10 +43,12 @@ class PostsController < ApplicationController
     end
   end
 
+  # カレンダー機能。
   def calendar
     @posts = @user.posts.includes(:user).order('start_time DESC')
   end
 
+  # 投稿検索機能
   def search
     @posts = @user.posts.search(params[:keyword]).order('created_at DESC')
   end

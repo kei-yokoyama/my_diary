@@ -1,5 +1,6 @@
-<%= form_with(model: @message, local: true) do |f| %>
+<%# 投稿完了メッセージ投稿フォーム内容 %>
 
+<%= form_with(model: @message, local: true) do |f| %>
 
   <%= f.text_area :text, placeholder: "内容", rows: "10", id: "text" %>
   <button type="button" id="emoji-text">😀</button>

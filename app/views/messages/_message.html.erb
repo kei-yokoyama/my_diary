@@ -1,3 +1,6 @@
+<%# 投稿完了メッセージ表示内容 %>
+
+<%# メッセージ本文 %>
 <div class="content_post" style="background-image: url(<%= message.text %>);">
       <div class="more_list_mark">🖌️</div>
       <div class="more">
@@ -13,6 +16,7 @@
         </ul>
       </div>
 
+<%# メッセージ画像 %>
       <p><%= simple_format(message.text) %></p>
       <%= image_tag message.image.variant(resize: '300x300'), class: 'post-image' if message.image.attached? %>
 
