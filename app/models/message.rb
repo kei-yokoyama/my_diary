@@ -4,6 +4,7 @@ class Message < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
+  #投稿に画像が添付されている場合true。text本文がなくても投稿保存可能になる。
   def was_attached?
     image.attached?
   end

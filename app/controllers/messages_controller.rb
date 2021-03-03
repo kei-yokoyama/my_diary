@@ -1,3 +1,4 @@
+# 投稿完了メッセージコントローラー
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[edit update destroy]
   before_action :move_to_log_in
