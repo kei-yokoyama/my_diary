@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function(){
+// 日記画像投稿機能 
+document.addEventListener('DOMContentLoaded', function () {
   console.log(123);
   const ImageList = document.getElementById('image-list');
     
